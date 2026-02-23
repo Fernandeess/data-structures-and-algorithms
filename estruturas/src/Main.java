@@ -90,63 +90,136 @@ public class Main {
 //                        : myLinkedList.findMiddleNode().value));
 //        System.out.println();
 
-        System.out.println("Test 1: Empty List");
+//        System.out.println("Test 1: Empty List");
+//        LinkedList myLinkedList = new LinkedList(1);
+//        myLinkedList.makeEmpty();  // Make list empty
+//        System.out.println("Expected: false");
+//        System.out.println("Actual: " + myLinkedList.hasLoop());
+//        System.out.println();
+//
+//        // Test 2: One node, no loop
+//        System.out.println("Test 2: One Node (No Loop)");
+//        myLinkedList = new LinkedList(1);
+//        System.out.println("Expected: false");
+//        System.out.println("Actual: " + myLinkedList.hasLoop());
+//        System.out.println();
+//
+//        // Test 3: One node, with loop to itself
+//        System.out.println("Test 3: One Node (Loop to Itself)");
+//        myLinkedList = new LinkedList(1);
+//        myLinkedList.getHead().next = myLinkedList.getHead();  // Create loop
+//        System.out.println("Expected: true");
+//        System.out.println("Actual: " + myLinkedList.hasLoop());
+//        System.out.println();
+//
+//        // Test 4: Multi-node, no loop
+//        System.out.println("Test 4: Multi-Node (No Loop)");
+//        myLinkedList = new LinkedList(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//        myLinkedList.append(4);
+//        System.out.println("1 -> 2 -> 3 -> 4");
+//        System.out.println("Expected: false");
+//        System.out.println("Actual: " + myLinkedList.hasLoop());
+//        System.out.println();
+//
+//        // Test 5: Multi-node, loop back to head
+//        System.out.println("Test 5: Multi-Node (Loop to Head)");
+//        myLinkedList = new LinkedList(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//        myLinkedList.append(4);
+//        myLinkedList.getTail().next = myLinkedList.getHead();  // Loop to head
+//        System.out.println("1 -> 2 -> 3 -> 4 -> (loops back to 1)");
+//        System.out.println("Expected: true");
+//        System.out.println("Actual: " + myLinkedList.hasLoop());
+//        System.out.println();
+//
+//        // Test 6: Multi-node, loop in the middle
+//        System.out.println("Test 6: Multi-Node (Loop to Middle Node)");
+//        myLinkedList = new LinkedList(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//        myLinkedList.append(4);
+//        LinkedList.Node middle = myLinkedList.getHead().next.next;  // Node 3
+//        myLinkedList.getTail().next = middle;  // Tail loops to 3
+//        System.out.println("1 -> 2 -> 3 -> 4 -> (loops back to 3)");
+//        System.out.println("Expected: true");
+//        System.out.println("Actual: " + myLinkedList.hasLoop());
+//        System.out.println();
+
+//        // Test 1: Empty list (k = 1)
+//        System.out.println("Test 1: Empty List (k = 1)");
+//        LinkedList myLinkedList = new LinkedList(1);
+//        myLinkedList.makeEmpty();
+//        LinkedList.Node result = myLinkedList.findKthFromEnd(1);
+//        System.out.println("Expected: null");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+//
+//        // Test 2: One element, k = 1 (last node)
+//        System.out.println("Test 2: One Element (k = 1)");
+//        myLinkedList = new LinkedList(10);
+//        result = myLinkedList.findKthFromEnd(1);
+//        System.out.println("10");
+//        System.out.println("Expected: 10");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+//
+//        // Test 3: One element, k = 2 (beyond end)
+//        System.out.println("Test 3: One Element (k = 2, Beyond End)");
+//        myLinkedList = new LinkedList(20);
+//        result = myLinkedList.findKthFromEnd(2);
+//        System.out.println("20");
+//        System.out.println("Expected: null");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+//
+//        // Prepare a multi-node list
+//        myLinkedList = new LinkedList(1);
+//        for (int i = 2; i <= 6; i++) {
+//            myLinkedList.append(i);
+//        }
+//        // List: 1 -> 2 -> 3 -> 4 -> 5 -> 6
+//
+//        // Test 4: k = 1 (last node)
+//        System.out.println("Test 4: Multi-Node (k = 1)");
+//        result = myLinkedList.findKthFromEnd(1);
+//        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
+//        System.out.println("Expected: 6");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+//
+//        // Test 5: k = 2 (second-to-last node)
+//        System.out.println("Test 5: Multi-Node (k = 2)");
+//        result = myLinkedList.findKthFromEnd(2);
+//        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
+//        System.out.println("Expected: 5");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+//
+//        // Test 6: k = 7 (k too large, length=6)
+//        System.out.println("Test 6: Multi-Node (k = 7, Too Large)");
+//        result = myLinkedList.findKthFromEnd(7);
+//        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
+//        System.out.println("Expected: null");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+
+        // Test 7: k = 4 (middle node)
         LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.makeEmpty();  // Make list empty
-        System.out.println("Expected: false");
-        System.out.println("Actual: " + myLinkedList.hasLoop());
-        System.out.println();
-
-        // Test 2: One node, no loop
-        System.out.println("Test 2: One Node (No Loop)");
-        myLinkedList = new LinkedList(1);
-        System.out.println("Expected: false");
-        System.out.println("Actual: " + myLinkedList.hasLoop());
-        System.out.println();
-
-        // Test 3: One node, with loop to itself
-        System.out.println("Test 3: One Node (Loop to Itself)");
-        myLinkedList = new LinkedList(1);
-        myLinkedList.getHead().next = myLinkedList.getHead();  // Create loop
-        System.out.println("Expected: true");
-        System.out.println("Actual: " + myLinkedList.hasLoop());
-        System.out.println();
-
-        // Test 4: Multi-node, no loop
-        System.out.println("Test 4: Multi-Node (No Loop)");
-        myLinkedList = new LinkedList(1);
         myLinkedList.append(2);
         myLinkedList.append(3);
         myLinkedList.append(4);
-        System.out.println("1 -> 2 -> 3 -> 4");
-        System.out.println("Expected: false");
-        System.out.println("Actual: " + myLinkedList.hasLoop());
+        myLinkedList.append(5);
+        myLinkedList.append(6);
+        System.out.println("Test 7: Multi-Node (k = 4)");
+        LinkedList.Node result = myLinkedList.findKthFromEnd(4);
+        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
+        System.out.println("Expected: 3");
+        System.out.println("Actual: " + (result == null ? "null" : result.value));
         System.out.println();
 
-        // Test 5: Multi-node, loop back to head
-        System.out.println("Test 5: Multi-Node (Loop to Head)");
-        myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-        myLinkedList.getTail().next = myLinkedList.getHead();  // Loop to head
-        System.out.println("1 -> 2 -> 3 -> 4 -> (loops back to 1)");
-        System.out.println("Expected: true");
-        System.out.println("Actual: " + myLinkedList.hasLoop());
-        System.out.println();
-
-        // Test 6: Multi-node, loop in the middle
-        System.out.println("Test 6: Multi-Node (Loop to Middle Node)");
-        myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-        LinkedList.Node middle = myLinkedList.getHead().next.next;  // Node 3
-        myLinkedList.getTail().next = middle;  // Tail loops to 3
-        System.out.println("1 -> 2 -> 3 -> 4 -> (loops back to 3)");
-        System.out.println("Expected: true");
-        System.out.println("Actual: " + myLinkedList.hasLoop());
-        System.out.println();
 
     }
 }
