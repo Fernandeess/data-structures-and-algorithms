@@ -42,6 +42,24 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
+    public void printAll() {
+        if (length == 0) {
+            System.out.println("Head: null");
+            System.out.println("Tail: null");
+        } else {
+            System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
+        }
+        System.out.println("Length:" + length);
+        System.out.println("\nDoubly Linked List:");
+        if (length == 0) {
+            System.out.println("empty");
+        } else {
+            printList();
+        }
+    }
+
+
     public void append(int value){
         Node newNode = new Node(value);
         if(length == 0){
@@ -53,6 +71,34 @@ public class DoublyLinkedList {
             tail = newNode;
         }
         length++;
+    }
+
+    public void prepend(int value){
+        Node newNode = new Node(value);
+        if(length == 0){
+            head = newNode;
+            tail = newNode;
+        }else{
+        newNode.next = head;
+        head.prev = newNode;
+        head = newNode;
+        }
+        length++;
+    }
+
+    public Node removeFirst(){
+        if(length == 0 ) return null;
+        Node tempNode = head;
+        if(length == 1){
+            head = null;
+            tail = null;
+        }else{
+            head = head.next;
+            head.prev = null;
+        }
+        length --;
+
+        return tempNode;
     }
 
     public Node removeLast(){

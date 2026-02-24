@@ -231,15 +231,46 @@ public class Main {
 //        myLinkedList.append(1);
 //        myLinkedList.partitionList(5);
 
-        DoublyLinkedList myDoublymyLinkedList = new DoublyLinkedList(1);
-        myDoublymyLinkedList.append(2);
-        myDoublymyLinkedList.append(3);
-        myDoublymyLinkedList.append(4);
-        myDoublymyLinkedList.printList();
-        System.out.println("Tail: " + myDoublymyLinkedList.getTail());
-        myDoublymyLinkedList.removeLast();
-        System.out.println("Tail: " + myDoublymyLinkedList.getTail());
-        myDoublymyLinkedList.printList();
+//        DoublyLinkedList myDoublymyLinkedList = new DoublyLinkedList(1);
+//        myDoublymyLinkedList.append(2);
+//        myDoublymyLinkedList.append(3);
+//        myDoublymyLinkedList.append(4);
+//        myDoublymyLinkedList.printList();
+//        System.out.println("Tail: " + myDoublymyLinkedList.getTail());
+//        myDoublymyLinkedList.removeLast();
+//        System.out.println("Tail: " + myDoublymyLinkedList.getTail());
+//        myDoublymyLinkedList.printList();
 
+//        DoublyLinkedList myDLL = new DoublyLinkedList(2);
+//        myDLL.append(3);
+//
+//        System.out.println("Before prepend():");
+//        System.out.println("-----------------");
+//        myDLL.printAll();
+//
+//        myDLL.prepend(1);
+//
+//        System.out.println("\n\nAfter prepend():");
+//        System.out.println("----------------");
+//        myDLL.printAll();
+        DoublyLinkedList myDLL = new DoublyLinkedList(2);
+        myDLL.append(1);
+
+        // (2) Items - Returns 2 Node
+        System.out.println(myDLL.removeFirst().value);
+        // (1) Item - Returns 1 Node
+        System.out.println(myDLL.removeFirst().value);
+        // (0) Items - Returns null
+        System.out.println(myDLL.removeFirst());
+
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            2
+            1
+            null
+
+        */
     }
 }
