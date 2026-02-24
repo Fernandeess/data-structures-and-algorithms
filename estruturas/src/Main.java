@@ -206,19 +206,28 @@ public class Main {
 //        System.out.println("Actual: " + (result == null ? "null" : result.value));
 //        System.out.println();
 
-        // Test 7: k = 4 (middle node)
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
+//        // Test 7: k = 4 (middle node)
+//        LinkedList myLinkedList = new LinkedList(1);
+//        myLinkedList.append(2);
+//        myLinkedList.append(3);
+//        myLinkedList.append(4);
+//        myLinkedList.append(5);
+//        myLinkedList.append(6);
+//        System.out.println("Test 7: Multi-Node (k = 4)");
+//        LinkedList.Node result = myLinkedList.findKthFromEnd(4);
+//        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
+//        System.out.println("Expected: 3");
+//        System.out.println("Actual: " + (result == null ? "null" : result.value));
+//        System.out.println();
+
+//        3 -> 8 -> 5 -> 10 -> 2 -> 1
+        LinkedList myLinkedList = new LinkedList(3);
+        myLinkedList.append(8);
         myLinkedList.append(5);
-        myLinkedList.append(6);
-        System.out.println("Test 7: Multi-Node (k = 4)");
-        LinkedList.Node result = myLinkedList.findKthFromEnd(4);
-        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
-        System.out.println("Expected: 3");
-        System.out.println("Actual: " + (result == null ? "null" : result.value));
-        System.out.println();
+        myLinkedList.append(10);
+        myLinkedList.append(2);
+        myLinkedList.append(1);
+        myLinkedList.partitionList(5);
 
 
     }
