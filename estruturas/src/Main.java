@@ -223,16 +223,23 @@ public class Main {
 //        System.out.println();
 
 //        3 -> 8 -> 5 -> 10 -> 2 -> 1
-        LinkedList myLinkedList = new LinkedList(3);
-        myLinkedList.append(8);
-        myLinkedList.append(5);
-        myLinkedList.append(10);
-        myLinkedList.append(2);
-        myLinkedList.append(1);
-        myLinkedList.partitionList(5);
+//        LinkedList myLinkedList = new LinkedList(3);
+//        myLinkedList.append(8);
+//        myLinkedList.append(5);
+//        myLinkedList.append(10);
+//        myLinkedList.append(2);
+//        myLinkedList.append(1);
+//        myLinkedList.partitionList(5);
 
         DoublyLinkedList myDoublymyLinkedList = new DoublyLinkedList(1);
-
+        myDoublymyLinkedList.append(2);
+        myDoublymyLinkedList.append(3);
+        myDoublymyLinkedList.append(4);
+        myDoublymyLinkedList.printList();
+        System.out.println("Tail: " + myDoublymyLinkedList.getTail());
+        myDoublymyLinkedList.removeLast();
+        System.out.println("Tail: " + myDoublymyLinkedList.getTail());
+        myDoublymyLinkedList.printList();
 
     }
 }

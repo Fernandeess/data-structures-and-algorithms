@@ -35,10 +35,11 @@ public class DoublyLinkedList {
         Node temp = head;
 
         while(temp != null){
-            System.out.println(temp.value);
+            System.out.print(" <-> " + temp.value + " <-> " );
+
             temp = temp.next;
         }
-
+        System.out.println();
     }
 
     public void append(int value){
@@ -52,6 +53,18 @@ public class DoublyLinkedList {
             tail = newNode;
         }
         length++;
+    }
+
+    public Node removeLast(){
+        if(length == 0) return null;
+
+        Node tempNode = tail;
+        tail = tail.prev;
+        tail.next = null;
+        tempNode.prev = null;
+        length --;
+
+        return tempNode;
     }
 
     public Node getHead() {
