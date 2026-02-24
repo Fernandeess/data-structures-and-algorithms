@@ -1,11 +1,13 @@
- //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+import LL.LinkedList;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
 //        // Test 1: Empty list
 //        System.out.println("Test 1: Empty List");
-//        LinkedList myLinkedList = new LinkedList(1);
+//        LL.LinkedList myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.makeEmpty();  // Make list empty
 //        System.out.println("Expected: null");
 //        System.out.println("Actual: " +
@@ -16,7 +18,7 @@ public class Main {
 //
 //        // Test 2: One element
 //        System.out.println("Test 2: One Element");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        System.out.println("1");
 //        System.out.println("Expected Middle Node: 1");
 //        System.out.println("Actual Middle Node: " +
@@ -27,7 +29,7 @@ public class Main {
 //
 //        // Test 3: Two elements (smallest even list)
 //        System.out.println("Test 3: Two Elements");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        System.out.println("1 -> 2");
 //        System.out.println("Expected Middle Node: 2");
@@ -39,7 +41,7 @@ public class Main {
 //
 //        // Test 4: Three elements (smallest odd list)
 //        System.out.println("Test 4: Three Elements");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
 //        System.out.println("1 -> 2 -> 3");
@@ -52,7 +54,7 @@ public class Main {
 //
 //        // Test 5: Odd number of elements (5 nodes)
 //        System.out.println("Test 5: Odd Number of Elements");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
 //        myLinkedList.append(4);
@@ -78,7 +80,7 @@ public class Main {
 //
 //        // Test 7: Larger list (11 nodes)
 //        System.out.println("Test 7: Larger List (11 Nodes)");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        for (int i = 2; i <= 11; i++) {
 //            myLinkedList.append(i);
 //        }
@@ -91,7 +93,7 @@ public class Main {
 //        System.out.println();
 
 //        System.out.println("Test 1: Empty List");
-//        LinkedList myLinkedList = new LinkedList(1);
+//        LL.LinkedList myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.makeEmpty();  // Make list empty
 //        System.out.println("Expected: false");
 //        System.out.println("Actual: " + myLinkedList.hasLoop());
@@ -99,14 +101,14 @@ public class Main {
 //
 //        // Test 2: One node, no loop
 //        System.out.println("Test 2: One Node (No Loop)");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        System.out.println("Expected: false");
 //        System.out.println("Actual: " + myLinkedList.hasLoop());
 //        System.out.println();
 //
 //        // Test 3: One node, with loop to itself
 //        System.out.println("Test 3: One Node (Loop to Itself)");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.getHead().next = myLinkedList.getHead();  // Create loop
 //        System.out.println("Expected: true");
 //        System.out.println("Actual: " + myLinkedList.hasLoop());
@@ -114,7 +116,7 @@ public class Main {
 //
 //        // Test 4: Multi-node, no loop
 //        System.out.println("Test 4: Multi-Node (No Loop)");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
 //        myLinkedList.append(4);
@@ -125,7 +127,7 @@ public class Main {
 //
 //        // Test 5: Multi-node, loop back to head
 //        System.out.println("Test 5: Multi-Node (Loop to Head)");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
 //        myLinkedList.append(4);
@@ -137,11 +139,11 @@ public class Main {
 //
 //        // Test 6: Multi-node, loop in the middle
 //        System.out.println("Test 6: Multi-Node (Loop to Middle Node)");
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
 //        myLinkedList.append(4);
-//        LinkedList.Node middle = myLinkedList.getHead().next.next;  // Node 3
+//        LL.LinkedList.Node middle = myLinkedList.getHead().next.next;  // Node 3
 //        myLinkedList.getTail().next = middle;  // Tail loops to 3
 //        System.out.println("1 -> 2 -> 3 -> 4 -> (loops back to 3)");
 //        System.out.println("Expected: true");
@@ -150,16 +152,16 @@ public class Main {
 
 //        // Test 1: Empty list (k = 1)
 //        System.out.println("Test 1: Empty List (k = 1)");
-//        LinkedList myLinkedList = new LinkedList(1);
+//        LL.LinkedList myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.makeEmpty();
-//        LinkedList.Node result = myLinkedList.findKthFromEnd(1);
+//        LL.LinkedList.Node result = myLinkedList.findKthFromEnd(1);
 //        System.out.println("Expected: null");
 //        System.out.println("Actual: " + (result == null ? "null" : result.value));
 //        System.out.println();
 //
 //        // Test 2: One element, k = 1 (last node)
 //        System.out.println("Test 2: One Element (k = 1)");
-//        myLinkedList = new LinkedList(10);
+//        myLinkedList = new LL.LinkedList(10);
 //        result = myLinkedList.findKthFromEnd(1);
 //        System.out.println("10");
 //        System.out.println("Expected: 10");
@@ -168,7 +170,7 @@ public class Main {
 //
 //        // Test 3: One element, k = 2 (beyond end)
 //        System.out.println("Test 3: One Element (k = 2, Beyond End)");
-//        myLinkedList = new LinkedList(20);
+//        myLinkedList = new LL.LinkedList(20);
 //        result = myLinkedList.findKthFromEnd(2);
 //        System.out.println("20");
 //        System.out.println("Expected: null");
@@ -176,7 +178,7 @@ public class Main {
 //        System.out.println();
 //
 //        // Prepare a multi-node list
-//        myLinkedList = new LinkedList(1);
+//        myLinkedList = new LL.LinkedList(1);
 //        for (int i = 2; i <= 6; i++) {
 //            myLinkedList.append(i);
 //        }
@@ -207,14 +209,14 @@ public class Main {
 //        System.out.println();
 
 //        // Test 7: k = 4 (middle node)
-//        LinkedList myLinkedList = new LinkedList(1);
+//        LL.LinkedList myLinkedList = new LL.LinkedList(1);
 //        myLinkedList.append(2);
 //        myLinkedList.append(3);
 //        myLinkedList.append(4);
 //        myLinkedList.append(5);
 //        myLinkedList.append(6);
 //        System.out.println("Test 7: Multi-Node (k = 4)");
-//        LinkedList.Node result = myLinkedList.findKthFromEnd(4);
+//        LL.LinkedList.Node result = myLinkedList.findKthFromEnd(4);
 //        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
 //        System.out.println("Expected: 3");
 //        System.out.println("Actual: " + (result == null ? "null" : result.value));
@@ -228,6 +230,8 @@ public class Main {
         myLinkedList.append(2);
         myLinkedList.append(1);
         myLinkedList.partitionList(5);
+
+        DoublyLinkedList myDoublymyLinkedList = new DoublyLinkedList(1);
 
 
     }
